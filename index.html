@@ -4,9 +4,19 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
-        
+
+        <!-- Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-179706251-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://gumroad.com/js/gumroad.js"></script>
@@ -61,6 +71,7 @@
                 background-position: left 55%;
                 border-bottom: 1px solid #efefef;
                 border-radius: 0;
+                position: relative;
             }
             .jumbotron h1 {
                 font-weight: 700;
@@ -70,6 +81,15 @@
                 /* font-weight: 900; */
                 color: #555;
                 /* font-size: 60px; */
+            }
+            .jumbotron .lead {
+                max-width: 600px;
+            }
+            .iphone-3d {
+                position: absolute;
+                width: 50%;
+                right: 3%;
+                bottom: 25%;
             }
             .section-icons {
                 border-bottom: 1px solid #efefef;
@@ -118,6 +138,7 @@
         </div>
 
         <div class="jumbotron">
+            <img class="iphone-3d d-none d-md-block" src="images/3d-iphone.png" />
             <h1>
                 <!-- Express Yourself -->
                 iOS 14 Icons
@@ -125,7 +146,13 @@
             <h2>
                 tailored made for the iPhone
             </h2>
-            <p class="lead">Make your iPhone uniquely yours with hand-crafted set of icons designed specially for iOS 14. Go on, have fun!</p>
+            <p class="lead">
+                Not all icons are created equal. Say no to poorly and hasty made icons. 
+                
+                Your phone deserves high quality icons that are created with high perfection. 
+                <!-- Make your iPhone uniquely yours with hand-crafted set of icons designed specially for iOS 14. Go on, have fun! -->
+            </p>
+            
             <!-- <hr class="my-4"> -->
             <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
             <ul class="list-unstyled features">
@@ -189,7 +216,7 @@
                     <div class="col">
                         <h1><span class="light">Fine Line</span> vs <strong>Bold Statement</strong></h1>
                         <h2>express yourself with outline or solid type icons</h2>
-                        <p>There are 200+ pairs of icons that comes with an outline or solid version, allowing you to mix and match them for the perfect setup!</p>
+                        <p>There are 200+ pairs of icons that comes with an outline and solid version (500+ in total), allowing you to mix and match them for the perfect setup!</p>
                         <img class="img-fluid img-fluid-max" src="images/outline-solid.png"></img>
                     </div>
                 </div>
@@ -233,7 +260,7 @@
                 <div class="row">
                     <div class="col">
                         <h1>Smarthome Ready</h1>
-                        <h2>From Nest to Lightbulbs to Home Assistant</h2>
+                        <h2>From Nest to Lightbulbs to Smartthings</h2>
                         <p>Your smarthome controls are front and center on your homescreen for fast access. Don't worry, we have you covered.</p>
                         <img class="img-fluid img-fluid-max" src="images/smarthome.png"></img>
                     </div>
@@ -369,6 +396,60 @@
 
         <div class="container divider"></div>
 
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                              <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-lg btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How to change icons in iOS 14
+                                  </button>
+                                </h2>
+                              </div>
+                          
+                              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  <img class="img-fluid" src="images/instructions.png" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-lg btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How to request missing icons
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  Just shoot an email to <a href="mailto:m@lominming.com">m@lominming.com</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-lg btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What does Lifetime Updates mean
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  As more icons are added in the future, you will receive the updates through your email.
+                                </div>
+                              </div>
+                            </div>
+                          </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="section">
             <div class="container">
                 <div class="row">
