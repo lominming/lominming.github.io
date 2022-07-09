@@ -1,688 +1,1602 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
-        <!-- Google Analytics -->
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-179706251-1', 'auto');
-        ga('send', 'pageview');
-        </script>
-        <!-- End Google Analytics -->
+    <!-- ****** favicons ****** -->
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/images/favicons/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/images/favicons/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" href="/images/favicons/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/images/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- ****** favicons ****** -->
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <script src="https://gumroad.com/js/gumroad.js"></script>
-        
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Lo Min Ming 罗敏铭</title>
 
-        <title>iOS 14 Icons by @lominming</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <style>
-            :host {
-                --font-family-sans-serif: "san francisco", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-                --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-            }
-            .section {
-                padding-top: 60px;
-                padding-bottom: 60px;
-                text-align: center;
-            }
-            h1 {
-                font-weight: 500;
-                font-size: 50px;
-            }
-            h2 {
-                font-weight: 400;
-                font-size: 26px;
-            }
-            h1+h2 {
-                color: #999;
-                margin-top: -10px;
-            }
-            h1+h2+p {
-                margin-top: 40px;
-            }
-            .ultra-light {
-                font-weight: 100;
-            }
-            .light {
-                font-weight: 200;
-            }
-            p {
-                font-weight: 300;
-                font-size: 18px;
-                color: #333;
-                margin: 14px 0;
-                line-height: 30px;
-            }
-            .banner {
-                padding: 10px;
-                text-align: right;
-            }
-            .jumbotron {
-                background: url(images/hero.jpg);
-                background-size: cover;
-                background-position: left 55%;
-                border-bottom: 1px solid #efefef;
-                border-radius: 0;
-                position: relative;
-            }
-            .jumbotron h1 {
-                font-weight: 700;
-                font-size: 60px;
-            }
-            .jumbotron h2 {
-                /* font-weight: 900; */
-                color: #555;
-                /* font-size: 60px; */
-            }
-            .jumbotron .lead {
-                max-width: 600px;
-            }
-            .iphone-3d {
-                position: absolute;
-                width: 50%;
-                right: 3%;
-                bottom: 25%;
-            }
-            .section-icons {
-                border-bottom: 1px solid #efefef;
-                border-top: 1px solid #efefef
-            }
-            .features {
-                padding: 24px 0;
-                font-weight: 300;
-                /* text-align: left; */
-            }
-            .features li {
-                font-size: 18px;
-                margin: 14px 0;
-                line-height: 32px;
-                font-size: 22px;
-            }
-            .btn-xlg {
-                padding: .9rem 2rem;
-                font-size: 1.7rem;
-                line-height: 1.6;
-                border-radius: .3rem;
-                font-weight: 300;
-            }
-            .btn-xlg strong {
-                font-weight: 700;
-            }
-            .img-fluid-max {
-                max-width: 750px;
-                width: 100%;
-                /* padding: 0 200px; */
-            }
-            .divider {
-                border-bottom: 1px solid #ddd;
-            }
-            .section.buy {
-                color: white;
-            }
-            .caption {
-                font-size: 15px;
-            }
-            .table-pricing td {
-                width: 33.3%;
-            }
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/tether.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/masonry.js"></script>
+    <script src="/javascripts/all.js"></script>
+  </head>
 
-            .table-pricing td {
-                color: #666;
-            }
-            .table-pricing td strong {
-                font-size: 18px;
-                color: #111;
-            }
-        </style>
-    </head>
-    <body>
-                
-        <div class="banner fixed-top">
-            <a class="btn btn-dark btn-sm" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true" role="button">Get icons now</a>
+  <body class="index">
+    <div class="content">
+      
+<div class="index-page">
+
+<!--   <div class="index-jumbo">
+    <h1>lo min ming</h1>
+    <h2>PHOTOGRAPHER &middot; DESIGNER &middot; DEVELOPER</h2>
+  </div> -->
+
+  <!-- Carousel -->
+  <div id="carousel-cover" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-cover" data-slide-to="1" class="active"></li>
+      <li data-target="#carousel-cover" data-slide-to="2"></li>
+      <li data-target="#carousel-cover" data-slide-to="3"></li>
+      <li data-target="#carousel-cover" data-slide-to="4"></li>
+      <li data-target="#carousel-cover" data-slide-to="5"></li>
+      <li data-target="#carousel-cover" data-slide-to="6"></li>
+      <li data-target="#carousel-cover" data-slide-to="7"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="images/covers/1.jpg" alt="1">
+        <div class="index-jumbo">
+          <img src="/images/logos/168-white.svg" class="index-logo" />
+          <h1>lo min ming</h1>
+          <h2>PHOTOGRAPHER &middot; DESIGNER &middot; DEVELOPER</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/covers/2.jpg" alt="2">
+        <div class="index-jumbo">
+          <h1>automotive</h1>
+          <h2>PHOTOGRAPHY</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/covers/3.jpg" alt="3">
+        <div class="index-jumbo">
+          <h1>landscape</h1>
+          <h2>PHOTOGRAPHY</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/covers/4.jpg" alt="4">
+        <div class="index-jumbo">
+          <h1>animals</h1>
+          <h2>PHOTOGRAPHY</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/covers/5.jpg" alt="5">
+        <div class="index-jumbo">
+          <h1>macros</h1>
+          <h2>PHOTOGRAPHY</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/covers/6.jpg" alt="6">
+        <div class="index-jumbo">
+          <h1>around the world</h1>
+          <h2>PHOTOGRAPHY</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/covers/7.jpg" alt="7">
+        <div class="index-jumbo">
+          <h1>food+drinks</h1>
+          <h2>PHOTOGRAPHY</h2>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-cover" role="button" data-slide="prev">
+      <span class="icon-prev" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-cover" role="button" data-slide="next">
+      <span class="icon-next" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+    <a name="automotive"></a>
+    <div class="section ">
+      <div class="container">
+
+        <div class="section__header">
+          <h2>photography</h2>
+          <h1>automotive</h1>
         </div>
 
-        <div class="jumbotron">
-            <img class="iphone-3d d-none d-md-block" src="images/3d-iphone.png" />
-            <h1>
-                <!-- Express Yourself -->
-                iOS 14 Icons
-            </h1>
-            <h2>
-                tailored made for the iPhone
-            </h2>
-            <p class="lead">
-                Not all icons are created equal. Say no to poorly and hasty made icons. 
-                
-                Your phone deserves high quality icons that are created with high perfection. 
-                <!-- Make your iPhone uniquely yours with hand-crafted set of icons designed specially for iOS 14. Go on, have fun! -->
-            </p>
-            
-            <!-- <hr class="my-4"> -->
-            <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-            <ul class="list-unstyled features">
-                <li>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                    </svg>
-                    500+ high quality icons
-                </li>
-                <li>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                    </svg>
-                    Unique outline & solid icon styles
-                </li>
-                <li>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                    </svg>
-                    Multiple color variations
-                </li>
-                <li>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                    </svg>
-                    Smarthome ready!
-                </li>
-                <li>
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                    </svg>
-                    Lifetime updates
-                </li>
-            </ul>
-            <a class="btn btn-primary btn-lg btn-xlg" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true" role="button"><strong>Buy Now</strong> &nbsp;&nbsp; $19.00</a>
-            <!-- <a class="gumroad-button" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true">Buy</a> -->
-            <p>
-                Limited time offer, price will increase when colored icons are added in future
-            </p>
+          <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170703/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170703.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Mt Shasta</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170702/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170702.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Crater Lake</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170701/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170701.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Lava Beds</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170630/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170630.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Lassen National Park</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170630/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170630.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Lassen National Park</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170621/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170621.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Pillar Point Harbor</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170618/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170618.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Portola Redwoods</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170611/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170611.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Seal Point Harbor</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170610/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170610.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Fitzgerald Marine</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170604/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170604.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Treasure Island</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170603/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170603.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Alameda</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170529b/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170529b.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Tracy</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170529/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170529.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Pinecrest Resort</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170528/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170528.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Pinecrest</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170524/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170524.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Calera Valley</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170523/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170523.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Pillar Point Harbor</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170521/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170521.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Napa Valley</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170518/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170518.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Mussel Rock</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170517/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170517.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Harding Park Golf</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170513/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170513.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>La Honda Rd</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170506/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170506.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Fort Baker</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170312/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170312.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Mussel Rock</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170305/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170305.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Skyline</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170225/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170225.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Alameda</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170218/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170218.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Oyster Point</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170212/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170212.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Pier</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170211/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170211.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Highway 1</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170205/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170205.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Gate Vista Point</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170204/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170204.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Ed R. Levin</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170129/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170129.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Bear Creek Rd</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170121/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170121.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Highway 1</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20170115/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20170115.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Highway 1</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20161204/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20161204.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Transmission Towers</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20161123/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20161123.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Big Sur & Beyond</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160911/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160911.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Napa Valley</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160905/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160905.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Vineyard</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160904/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160904.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Lake Berryessa</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160903/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160903.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Vineyard</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160827/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160827.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Alviso</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160706/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160706.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Monterey</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160625/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160625.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Mount Hamilton</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160618/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160618.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Stanford</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160611/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160611.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Napa Valley</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/automotive/20160604/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/automotive/20160604.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Collection</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+
+    <a name="landscape-macros"></a>
+    <div class="section alt-background">
+      <div class="container">
+
+        <div class="section__header">
+          <h2>photography</h2>
+          <h1>landscape+macros</h1>
+        </div>
+
+          <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6">
+  <a class="grid-item" href="/landscape-macros/picks/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/picks.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Picks</h2>
+        <p>my favorites</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6">
+  <a class="grid-item" href="/landscape-macros/panorama/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/panorama.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Panorama</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/bees-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/bees-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Bees One</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/bees-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/bees-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Bees Two</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/birds-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/birds-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Birds One</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/birds-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/birds-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Birds Two</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/flowers-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/flowers-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Flowers One</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/flowers-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/flowers-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Flowers Two</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/animals-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/animals-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Animals One</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/animals-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/animals-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Animals Two</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/insects/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/insects.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Insects</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/butterflies/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/butterflies.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Butterflies</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/dragonflies/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/dragonflies.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Dragonflies</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/golden-hour/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/golden-hour.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Golden Hour</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/landscape-macros/planes/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/landscape-macros/planes.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Planes</h2>
+        <p></p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+    </div>
+
+
+    <a name="around-the-world"></a>
+    <div class="section ">
+      <div class="container">
+
+        <div class="section__header">
+          <h2>photography</h2>
+          <h1>around the world</h1>
         </div>
 
 
-        <div class="section d-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Endless Choices...</h1>
-                        <h2>to craft your own unique homescreen</h2>
-                        <p>
-                            <table class="table table-pricing">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Minimalistic Pack</th>
-                                    <th scope="col">Vibrant Pack</th>
-                                    <th scope="col">3D Pack</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>Simple & Flat</td>
-                                    <td>Colorful & Glowing</td>
-                                    <td>All 3D</td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <a class="btn btn-primary btn-lg" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true" role="button">$9.00</a>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-primary btn-lg" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true" role="button">$9.00</a>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-primary btn-lg" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true" role="button">$19.00</a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <strong>2 Icon Styles</strong><br>
-                                        Outline & Solid
-                                    </td>
-                                    <td>
-                                        <strong>4 Icon Styles</strong><br>
-                                        Outline, Solid, Outline Neon, Solid Glow
-                                    </td>
-                                    <td>
-                                        <strong>2 Icon Styles</strong><br>
-                                        3D Block, 3D Glass, 3D Stack, 3D Outline, 3D Indent
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <strong>Flat Colored Icons</strong><br>
-                                        on grayscale backgrounds
-                                    </td>
-                                    <td>
-                                        <strong>Gradient Colored Icons</strong><br>
-                                        on colorful backgrounds
-                                    </td>
-                                    <td>
-                                        <strong>Gradient Colored Icons</strong><br>
-                                        on colorful backgrounds
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                        <strong>Only flat icons</strong><br>
-                                        No effects, shadows, and glow
-                                    </td>
-                                    <td>
-                                        <strong>Icons with Effects</strong><br>
-                                        Soft shadows and neon glow
-                                    </td>
-                                    <td>
-                                        <strong>Icons with 3D Effects</strong><br>
-                                        Soft shadows and neon glow
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-
-                        </p>
-                    </div>
-                </div>
+            <div class="section__category-header">
+              <h3>Europe</h3>
             </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/paris-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/paris-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Paris One</h2>
+        <p>France</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/paris-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/paris-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Paris Two</h2>
+        <p>France</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/paris-three/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/paris-three.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Paris Three</h2>
+        <p>France</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/aix-en-provence/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/aix-en-provence.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Aix-en-Provence</h2>
+        <p>France</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/london/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/london.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>London</h2>
+        <p>UK</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/digne/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/digne.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Digne</h2>
+        <p>France</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+            <div class="section__category-header">
+              <h3>America</h3>
+            </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/niagara-falls/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/niagara-falls.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Niagara Falls</h2>
+        <p>canada</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/toronto/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/toronto.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Toronto</h2>
+        <p>Canada</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/cape-cod/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/cape-cod.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Cape Cod</h2>
+        <p>USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/stanford-university/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/stanford-university.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Stanford University</h2>
+        <p>California</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/new-york-city/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/new-york-city.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>New York City</h2>
+        <p>USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/chicago/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/chicago.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Chicago</h2>
+        <p>USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/shasta-lake/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/shasta-lake.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Shasta Lake</h2>
+        <p>USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+            <div class="section__category-header">
+              <h3>Asia</h3>
+            </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/shanghai/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/shanghai.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Shanghai</h2>
+        <p>China</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/xidi/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/xidi.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Xidi</h2>
+        <p>China</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/forbidden-city/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/forbidden-city.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Forbidden City</h2>
+        <p>China</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/beijing/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/beijing.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Beijing</h2>
+        <p>China</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/huangshan/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/huangshan.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Huangshan</h2>
+        <p>China</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/seoul-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/seoul-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Seoul One</h2>
+        <p>Korea</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/seoul-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/seoul-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Seoul Two</h2>
+        <p>Korea</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/jeju-one/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/jeju-one.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Jeju One</h2>
+        <p>Korea</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/jeju-two/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/jeju-two.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Jeju Two</h2>
+        <p>Korea</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+            <div class="section__category-header">
+              <h3>Australia</h3>
+            </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/around-the-world/opera-house/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/around-the-world/opera-house.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Opera House</h2>
+        <p>Sydney</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+
+
+      </div>
+
+    </div>
+
+
+    <a name="food-drinks"></a>
+    <div class="section alt-background">
+      <div class="container">
+
+        <div class="section__header">
+          <h2>stars</h2>
+          <h1>food+drinks</h1>
         </div>
 
 
-        <div class="container divider d-none"></div>
-
-        <div class="section d-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Endless Choices...</h1>
-                        <h2>to craft your own unique homescreen</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h1>4 Icon Shapes</h1>
-                        <h2>default, squircle, circle, organic</h2>
-                        <p>Use the provided matching wallpapers to use the different icon shapes.</p>
-                        <img class="img-fluid img-fluid-max" src="images/crafted.png"></img>
-                    </div>
-                    <div class="col">
-                        <h1>2 Icon Styles</h1>
-                        <h2>outline vs solid</h2>
-                        <p>Each icon is carefully drawn in vector format following the original app icons, then export to png.</p>
-                        <img class="img-fluid img-fluid-max" src="images/outline-solid.png"></img>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h1>18 Color Gradients</h1>
-                        <h2>default, squircle, circle, organic</h2>
-                        <p>Use the provided matching wallpapers to use the different icon shapes.</p>
-                        <img class="img-fluid img-fluid-max" src="images/crafted.png"></img>
-                    </div>
-                    <div class="col">
-                        <h1>2 Icon Styles</h1>
-                        <h2>outline vs solid</h2>
-                        <p>Each icon is carefully drawn in vector format following the original app icons, then export to png.</p>
-                        <img class="img-fluid img-fluid-max" src="images/outline-solid.png"></img>
-                    </div>
-                </div>
+            <div class="section__category-header">
+              <h3>New York City, USA</h3>
             </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/eleven-madison-park/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/eleven-madison-park.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Eleven Madison Park</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/le-bernardin/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/le-bernardin.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Le Bernardin</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/daniel/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/daniel.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Daniel</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/per-se/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/per-se.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Per Se</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/marea/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/marea.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Marea</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/aldea/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/aldea.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Aldea</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/wallse/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/wallse.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Wallse</h2>
+        <p>New York City, USA</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+            <div class="section__category-header">
+              <h3>Tokyo, Japan</h3>
+            </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/kanda/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/kanda.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Kanda</h2>
+        <p>Tokyo, Japan</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/hamadaya/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/hamadaya.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Hamadaya</h2>
+        <p>Tokyo, Japan</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/sazanka/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/sazanka.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Sazanka</h2>
+        <p>Tokyo, Japan</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+            <div class="section__category-header">
+              <h3>France</h3>
+            </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/pierre-gagnaire/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/pierre-gagnaire.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Pierre Gagnaire</h2>
+        <p>Paris, France</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/arpege/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/arpege.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Arpege</h2>
+        <p>Paris, France</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/l-atelier-robuchon/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/l-atelier-robuchon.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>L'Atelier Robuchon</h2>
+        <p>Paris, France</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+            <div class="section__category-header">
+              <h3>Canada</h3>
+            </div>
+            <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/splendido/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/splendido.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Splendido</h2>
+        <p>Toronto, Canada</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/scaramouche/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/scaramouche.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Scaramouche</h2>
+        <p>Toronto, Canada</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+  <a class="grid-item" href="/food-drinks/canoe/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/food-drinks/canoe.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Canoe</h2>
+        <p>Toronto, Canada</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
+
+
+
+      </div>
+
+    </div>
+
+
+    <a name="development-design"></a>
+    <div class="section ">
+      <div class="container">
+
+        <div class="section__header">
+          <h2>portfolio</h2>
+          <h1>development&design</h1>
         </div>
 
-        <div class="container divider d-none"></div>
+          <div class="row gallery-block-grid">
+  <div class="block-grid">
+      <div class="col-xs-12 col-sm-6">
+  <a class="grid-item" href="/development-design/projects/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/development-design/projects.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Projects</h2>
+        <p>apps, web, icons, etc.</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6">
+  <a class="grid-item" href="/development-design/digital-art/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/development-design/digital-art.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>Digital Art</h2>
+        <p>abstract collection</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6">
+  <a class="grid-item" href="/development-design/3d/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/development-design/3d.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>3D</h2>
+        <p>3D renders and short films</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <div class="col-xs-12 col-sm-6">
+  <a class="grid-item" href="/development-design/hardware/index.html">
+    <div class="grid-item__background" style="background-image: url('/images/index/development-design/hardware.jpg')"></div>
+    <div class="center-overlay">
+      <div class="issue-box">
+        <h2>hardware</h2>
+        <p>machine shop creations</p>
+      </div>
+    </div>
+  </a>
+</div>
+  </div>
+</div>
 
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Meticulously Crafted</h1>
-                        <h2>perfect icons for a perfect phone</h2>
-                        <p>Each icon is carefully drawn in vector format following the original app icons, then export to png.</p>
-                        <img class="img-fluid img-fluid-max" src="images/crafted.png"></img>
-                    </div>
-                </div>
-            </div>
+
+      </div>
+
+    </div>
+
+
+
+  <!-- Writings -->
+
+  <a name="writings"></a>
+  <div class="section section--writings alt-background">
+    <div class="container">
+      <div class="section__header">
+        <h2>writings</h2>
+        <h1>thoughts. stories. life.</h1>
+      </div>
+      <ul class="blog-list">
+  <li>
+    <div class="line"></div>
+    <h3>Why Isn't There A Standard Share Icon?</h3>
+    <h6>June 13, 2014 @ fastcodesign.com</h6>
+    <p>
+      And which one is best? A look at the many (many) options
+      <a href="http://www.fastcodesign.com/3031872/why-isnt-there-a-standard-share-button">Read more...</a>
+    </p>
+  </li>
+  <li>
+    <div class="line"></div>
+    <h3>Mac OS X Yosemite Under The Magnifying Glass</h3>
+    <h6>June 11, 2014 @ gizmodo.com</h6>
+    <p>Apple revealed a sneak peek into Mac OS X Yosemite earlier this week. Not surprisingly, Apple updated its desktop OS to match iOS 7′s design language...
+      <a href="http://www.gizmodo.com.au/2014/06/mac-os-x-yosemite-under-the-magnifying-glass/">Read more...</a>
+    </p>
+  </li>
+  <li>
+    <div class="line"></div>
+    <h3>The Makings Of A Great Logo</h3>
+    <h6>June 2, 2014 @ fastcodesign.com</h6>
+    <p>
+      Six questions to ask yourself when designing a brand...
+      <a href="http://www.fastcodesign.com/3031328/the-makings-of-a-great-logo">Read more...</a>
+    </p>
+  </li>
+  <li>
+    <div class="line"></div>
+    <h3>Till Next Time, SF MOMA</h3>
+    <h6>June 4, 2013 @ medium.com</h6>
+    <p>June 2nd was the last day to visit SFMOMA before it drew its curtains and turned dark for 2.5 years...
+      <a href="https://medium.com/daily-musings/3acd9654cbef">Read more...</a>
+    </p>
+  </li>
+  <li>
+    <div class="line"></div>
+    <h3>A billion dollar software tech company is founded every 3 months in U.S</h3>
+    <h6>November 12, 2012 @ blog.minming.net</h6>
+    <p>Ron Conway once said: “There’s a billion company created every 3 months. Now, it is every 2 months”.
+      <a href="http://blog.minming.net/post/35553963889/a-billion-dollar-software-tech-company-is-founded-every">Read more...</a>
+    </p>
+  </li>
+</ul>
+    </div>
+  </div>
+
+
+  <!-- About Me -->
+
+  <a name="about-me"></a>
+  <div class="section section--about">
+    <div class="container">
+      <div class="section__header">
+        <h2>about me</h2>
+        <h1>i'm lo min ming</h1>
+      </div>
+      <ul class="timeline">
+
+  <li class="event">
+    <label><img src="/images/me/dropbox_logo.svg"></label>
+    <div class="thumb"><span>01/<br><strong>2015</strong></span></div>
+    <div class="content-perspective">
+      <div class="timeline-content">
+        <div class="content-inner">
+          <h4>ACQUIRED BY <strong>DROPBOX</strong> <img src="/images/me/dropbox_logo.svg" class="hidden" style="margin-left: 0.5em; height: 1.2em; width: 1.2em; margin-top: -0.2em;"></h4>
+          <p><a href="https://www.pixelapse.com">Pixelapse</a> was acquired by Dropbox - Bringing collaboration platform to more users!</p>
         </div>
+      </div>
+    </div>
+  </li>
 
-        <div class="container divider"></div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1><span class="light">Fine Line</span> vs <strong>Bold Statement</strong></h1>
-                        <h2>express yourself with outline or solid type icons</h2>
-                        <p>There are 200+ pairs of icons that comes with an outline and solid version (500+ in total), allowing you to mix and match them for the perfect setup!</p>
-                        <img class="img-fluid img-fluid-max" src="images/outline-solid.png"></img>
-                    </div>
-                </div>
-            </div>
+  <li class="event">
+    <label><img src="/images/me/pixelapse_logo.svg"></label>
+    <div class="thumb"><span>10/<br><strong>2011</strong></span></div>
+    <div class="content-perspective">
+      <div class="timeline-content">
+        <div class="content-inner">
+          <h4>CO-FOUNDER <strong>PIXELAPSE</strong> <img src="/images/me/pixelapse_logo.svg" class="hidden" style="margin-left: 0.5em; height: 1.2em; width: 1.2em; margin-top: -0.2em;"></h4>
+          <p><a href="https://www.pixelapse.com">Pixelapse</a> is Github for Designers. As both a developer and a designer, I have seen both sides of the world. There's a lack of version control + collaboration tool for designers. With Pixelapse, I aim to solve the problem and introduce the open source design movement.</p>
         </div>
+      </div>
+    </div>
+  </li>
 
-        <div class="container divider"></div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Accuracy vs Minimalism</h1>
-                        <h2>the choice is yours</h2>
-                        <p>All icons are designed with high accuracy in a vector format to match the original icons. You may prefer to have the icon that is more true to the original icon (we know familiarity and habits are hard to break); or you may prefer one that is less complex and more minimalist. We don't decide for you, choose the one that matches you. </p>
-                        <img class="img-fluid img-fluid-max" src="images/accurate.png"></img>
-                    </div>
-                </div>
-            </div>
+  <li class="event">
+    <label><img src="/images/me/stanford_logo.svg"></label>
+    <div class="thumb"><span>06/<br><strong>2011</strong></span></div>
+    <div class="content-perspective">
+      <div class="timeline-content">
+        <div class="content-inner">
+          <h4>B.S. & M.S. <strong>STANFORD UNIVERSITY</strong> <img src="/images/me/stanford_logo.svg" class="hidden" style="margin-left: 0.5em; height: 1.2em; width: 1.2em; margin-top: -0.2em;"></h4>
+          <p>I graduated from Stanford University with both a Bachelor in Computer Science and Masters in Computer Science (Human Computer Interactions).</p>
         </div>
-        
-        <div class="container divider"></div>
+      </div>
+    </div>
+  </li>
 
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Express Differently</h1>
-                        <h2>beautiful choices. pick any.</h2>
-                        <p>We know that sometimes you don't like the original icon as much. We provide great variations for you. And as always, they all come in outline or solid versions.</p>
-                        <img class="img-fluid img-fluid-max" src="images/choices.png"></img>
-                    </div>
-                </div>
-            </div>
+  <li class="event">
+    <label><img src="/images/me/microsoft_logo.svg"></label>
+    <div class="thumb"><span>06/<br><strong>2010</strong></span></div>
+    <div class="content-perspective">
+      <div class="timeline-content">
+        <div class="content-inner">
+          <h4>PROGRAM MANAGER <strong>MICROSOFT</strong> <img src="/images/me/microsoft_logo.svg" class="hidden" style="margin-left: 0.5em; height: 1em; width: 1em; margin-top: -0.2em;"></h4>
+          <p>I was part of the Developer Experience team that launched Windows Phone back in 2010.</p>
         </div>
+      </div>
+    </div>
+  </li>
 
-        <div class="container divider"></div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Smarthome Ready</h1>
-                        <h2>From Nest to Lightbulbs to Smartthings</h2>
-                        <p>Your smarthome controls are front and center on your homescreen for fast access. Don't worry, we have you covered.</p>
-                        <img class="img-fluid img-fluid-max" src="images/smarthome.png"></img>
-                    </div>
-                </div>
-            </div>
+  <li class="event">
+    <label><img src="/images/me/google_square_logo.svg"></label>
+    <div class="thumb"><span>06/<br><strong>2009</strong></span></div>
+    <div class="content-perspective">
+      <div class="timeline-content">
+        <div class="content-inner">
+          <h4>UX DESIGNER <strong>GOOGLE</strong> <img src="/images/me/google_square_logo.svg" class="hidden" style="margin-left: 0.5em; height: 1em; width: 1em; margin-top: -0.2em;"></h4>
+          <p>I was the User Experience designer in Google Maps for Mobile and was part of the team that launched turn-by-turn Navigation in Google Maps on Android.</p>
         </div>
+      </div>
+    </div>
+  </li>
 
-        <div class="container divider"></div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Misc. Icons</h1>
-                        <h2>generic icons provided to dress up your phone</h2>
-                        <p>Sometimes you have unique actions that require unique icons. We got you covered with generic icons to use on shortcuts or any other actions.</p>
-                        <img class="img-fluid img-fluid-max" src="images/generics.png"></img>
-                    </div>
-                </div>
-            </div>
+  <li class="event" style="padding-bottom: 30px">
+    <label><img src="/images/me/timeline_circle.svg"></label>
+    <div class="thumb"><span>2000-<br><strong>2009</strong></span></div>
+    <div class="content-perspective">
+      <div class="timeline-content">
+        <div class="content-inner">
+          <h4>AT A GLANCE</h4>
+          <p>
+            <strong>Lee Kuan Yew Award</strong> in Information Technology · Singapore <strong>IT Youth Award</strong> of the Year<br>
+            <strong>Gold Medal</strong> in World Skills 2005 · <strong>Gold Medal</strong> in WorldSkills Singapore 2004 <br>
+            <strong>Gold Award</strong> Top Student (NYP) · <strong>Outstanding Project Work</strong> Book Prize <br>
+            <strong>Top Prize</strong> - Wireless Java Jam, Code Jam · Singapore National <strong>Weiqi (GO)</strong> player <br>
+            <strong>Cisco Certified</strong> Network Administrator · Professional Certificate in <strong>Advance Computer Animation</strong><br>
+            <strong>Adobe Certified Expert</strong> Photoshop CS · <strong>Microsoft Office Specialist</strong> Master Level
+          </p>
         </div>
+      </div>
+    </div>
+  </li>
 
-        <div class="container divider"></div>
+</ul>
+    </div>
+  </div>
 
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Color Variations</h1>
-                        <h2>from #000 to 255,255,255</h2>
-                        <p>4 classic grayscale variations for you to choose from.</p>
-                        <p>Colored versions coming soon. Price will increase when more variations are added. Purchase now at a discounted price so you can get the free upgrades to the colored versions. </p>
-                        <img class="img-fluid img-fluid-max" src="images/variations.png"></img>
-                    </div>
-                </div>
-            </div>
+    <a name="contact"></a>
+  <div class="section section--contact">
+    <div class="container">
+
+      <div class="section__header">
+        <h2>contact</h2>
+        <h1>@lominming</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+
+          <p class="contact-icons">
+            <a href="https://twitter.com/lominming"><i class="icon-twitter-bird"></i></a>
+            <a href="https://www.facebook.com/lominming"><i class="icon-facebook-rect"></i></a>
+            <a href="https://www.linkedin.com/in/lominming"><i class="icon-linkedin"></i></a>
+            <a href="http://dribbble.com/minming"><i class="icon-dribbble"></i></a>
+            <a href="https://github.com/lominming"><i class="icon-github-text"></i></a>
+            <a href="http://blog.minming.net/rss"><i class="icon-rss"></i></a>
+            <a href="mailto:minming@minming.net"><i class="icon-mail-alt"></i></a>
+          </p>
+          <p>
+            Handcrafted by Lo Min Ming · 罗敏铭 from Stanford, California
+          </p>
+
         </div>
+      </div>
+    </div>
+  </div>
 
-        
-        <div class="section d-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Beyond Icons</h1>
-                        <h2>Included in your purchase, we teach you how to hide icon text to create the ultra minimlistic look. or no icons borders</h2>
-                        <p>...</p>
-                        <img class="img-fluid" src="images/generics.png"></img>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
 
-        <div class="section d-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h1>Coming Soon!</h1>
-                        <h2>subtle, color, originals, colorsss</h2>
-                        <p>...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <img class="img-fluid section-icons" src="images/icons.jpg"></img>
-        
-        <div class="section">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col">
-                        <h1>Lifetime Updates</h1>
-                        <p>
-                            Receive new awesomeness as more icon styles are updated. 
-                            <br>
-
-                            <span class="caption"><strong>Limited time offer.</strong> Price will increase when colored icons are added in future.</span>
-                            
-                        </p>
-                        <p>
-                            <br>
-                            <a class="btn btn-primary btn-xlg" href="https://gum.co/TDKyF" target="_blank" data-gumroad-single-product="true" role="button"><strong>Get Icons Now</strong> &nbsp;&nbsp; $19.00</a>
-                        </p>
-                        <ul class="list-unstyled features">
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                <strong>500+ high quality icons</strong> for each color variations
-                            </li>
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                <strong>Outline & solid</strong> icons versions
-                            </li>
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                Multiple color variations
-                            </li>
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                Multiple icon variations for same app
-                            </li>
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                Smarthome ready!
-                            </li>
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                Include generic misc. icons
-                            </li>
-                            <li>
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
-                                </svg>
-                                Lifetime updates
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container divider"></div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                              <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-lg btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How to change icons in iOS 14
-                                  </button>
-                                </h2>
-                              </div>
-                          
-                              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                  <img class="img-fluid" src="images/instructions.png" />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
-                              <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-lg btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How to request missing icons
-                                  </button>
-                                </h2>
-                              </div>
-                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                  Just shoot an email to <a href="mailto:m@lominming.com">m@lominming.com</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
-                              <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-lg btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    What does Lifetime Updates mean
-                                  </button>
-                                </h2>
-                              </div>
-                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                  As more icons are added in the future, you will receive the updates through your email.
-                                </div>
-                              </div>
-                            </div>
-                          </div>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container divider"></div>
-
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p>
-                            <button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#freebiesModal">
-                                Looking for Freebies?
-                            </button>
-                            <br><br>
-                        </p>
-
-                        <p>Questions or new icons requests? <a target="blank" href="mailto:m@lominming.com">m@lominming.com</a></p>
-                        <p>Design in California by <a target="blank" href="https://twitter.com/lominming">@lominming</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="freebiesModal" tabindex="-1" aria-labelledby="freebiesModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="freebiesModalLabel">Freebies!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                          <div class="col">
-                              <h2>
-                                  iPhone 12 Pro Max Vector Mockup Template 
-                                  &nbsp; &nbsp;
-                              </h2>
-                                <p>
-                                    
-                                <a class="btn btn-success btn-sm" href="https://gum.co/dmLJB" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
-                                  </svg> &nbsp; Get It!</a>
-                                  <br>
-                                    <ul>
-                                        <li>Apple iPhone 12 Pro Max vector mockup template accurately recreated based on images from Apple's website.</li>
-                                        <li>Phone highlights, antenna, buttons highlights, etc. are all in drawn in vector format.</li>
-                                        <li>All 4 colors: Pacific Blue, Gold, Graphite, and Silver are included.</li>
-                                        <li>The mask for the phone's screen is ready for 2778 x 1284 pixels.</li>
-                                        <li>.sketch, .svg, .ai files are provided.</li>
-                                    </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <img class="img-fluid" src="images/freebies/iphone-12-mockup-vs.png" />
-                                <br><br>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <img class="img-fluid" src="images/freebies/iphone-12-mockup-colors-2.png" />
-                                <br><br>
-                            </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6 col-sm-12"><img class="img-fluid" src="images/freebies/iphone-12-mockup-detailed.png" /></div>
-                          <div class="col-md-6 col-sm-12"><img class="img-fluid" src="images/freebies/iphone-12-mockup-colors.png" /></div>
-                        </div>
-                      </div>                    
-                </div>
-                <div class="modal-footer d-none">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script>
-            if(window.location.hash) {
-                var hash = window.location.hash.substring(1); 
-                if (hash.toLowerCase() == "freebies") {
-                    $('#freebiesModal').modal('show');
-                }
-            } else {
-                // No hash found
-            }
-        </script>
-    </body>
+    </div>
+    <script src="/javascripts/popup.js"></script>
+  </body>
 </html>
